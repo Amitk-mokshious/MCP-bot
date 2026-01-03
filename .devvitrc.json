@@ -1,0 +1,11 @@
+{
+  "appName": "mcp-bot",
+  "appVersion": "1.0.0",
+  "post": {
+    "install": true
+  },
+  "http": {
+    "domains": ["nondiametrally-nonwatertight-lesley.ngrok-free.dev"]
+  }
+}
+

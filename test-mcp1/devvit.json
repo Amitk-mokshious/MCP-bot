@@ -1,0 +1,11 @@
+{
+  "name": "test-mcp1",
+  "post": {},
+  "permissions": {
+    "http": {
+      "enable": true,
+      "domains": ["nondiametrally-nonwatertight-lesley.ngrok-free.dev"]
+    }
+  }
+}
+

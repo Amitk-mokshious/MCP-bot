@@ -1,0 +1,14 @@
+{
+  "appName": "test-mcp1",
+  "appVersion": "1.0.0",
+  "post": {
+    "install": true
+  },
+  "permissions": {
+    "http": {
+      "enable": true,
+      "domains": ["nondiametrally-nonwatertight-lesley.ngrok-free.dev"]
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+{
+  "name": "mcp-bot",
+  "version": "1.0.0",
+  "description": "Reddit bot using Devvit with MCP server integration",
+  "type": "module",
+  "scripts": {
+    "dev": "devvit dev",
+    "build": "devvit build",
+    "upload": "devvit upload"
+  },
+  "keywords": ["devvit", "reddit", "bot", "mcp"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@devvit/cli": "^0.9.0",
+    "@devvit/public-api": "^0.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
