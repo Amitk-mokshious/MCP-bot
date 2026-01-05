@@ -6,7 +6,7 @@ import { extractIntent, searchProxyFAQ, formatReply } from './actions.js';
 Devvit.configure({
   redditAPI: true,
   http: {
-    domains: ['nondiametrally-nonwatertight-lesley.ngrok-free.dev'],
+    domains: ['mcp-bot-production.up.railway.app'],
   },
 });
 

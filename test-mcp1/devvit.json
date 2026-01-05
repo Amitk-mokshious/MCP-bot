@@ -4,7 +4,7 @@
   "permissions": {
     "http": {
       "enable": true,
-      "domains": ["nondiametrally-nonwatertight-lesley.ngrok-free.dev"]
+      "domains": ["mcp-bot-production.up.railway.app"]
     }
   }
 }

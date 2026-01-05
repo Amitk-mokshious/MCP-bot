@@ -21,8 +21,8 @@ export interface FAQRecord {
 }
 
 // MCP Server URL
-// Using ngrok URL so Reddit servers can access the local MCP server
-const MCP_SERVER_URL = 'https://nondiametrally-nonwatertight-lesley.ngrok-free.dev';
+// Using Railway URL so Reddit servers can access the MCP server
+const MCP_SERVER_URL = 'https://mcp-bot-production.up.railway.app';
 
 /**
  * Extract intent from post text using keyword matching
