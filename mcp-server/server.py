@@ -126,8 +126,14 @@ async def health():
 
 if __name__ == "__main__":
     import uvicorn
-    print(f"Starting MCP server on http://localhost:8000")
+    import os
+    
+    # Railway provides PORT environment variable, default to 8000 for local
+    port = int(os.environ.get("PORT", 8000))
+    host = os.environ.get("HOST", "0.0.0.0")
+    
+    print(f"Starting MCP server on http://{host}:{port}")
     print(f"FAQ file: {FAQ_FILE}")
     print(f"FAQ file exists: {FAQ_FILE.exists()}")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host=host, port=port)
 
