@@ -4,8 +4,12 @@
   "permissions": {
     "http": {
       "enable": true,
-      "domains": ["mcp-bot-production.up.railway.app"]
+      "domains": [
+        "mcp-bot-production.up.railway.app"
+      ]
     }
+  },
+  "dev": {
+    "subreddit": "test_mcp1_dev3"
   }
 }
-
