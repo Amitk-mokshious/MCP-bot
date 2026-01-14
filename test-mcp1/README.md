@@ -1,15 +1,15 @@
 # MCP Bot - Reddit Bot with MCP Server Integration
 
-A Reddit bot built with Devvit that monitors posts, extracts intent, and fetches answers from a local MCP (Model Context Protocol) server via HTTP.
+A Reddit bot built with Devvit that monitors posts, extracts intent, and fetches answers from a Railway-hosted MCP (Model Context Protocol) server via HTTP.
 
 ## Fetch Domains
 
 This app requires HTTP access to the following domain:
 
-### `nondiametrally-nonwatertight-lesley.ngrok-free.dev`
+### `mcp-bot-production.up.railway.app`
 
 **Justification:**
-This domain is an ngrok tunnel that forwards requests to a local MCP (Model Context Protocol) server running on the developer's machine. The MCP server acts as a knowledge engine that provides FAQ answers about proxy service providers (Bright Data, Oxylabs, Smartproxy, ScrapeOps) based on vendor and topic queries.
+This domain hosts a production MCP (Model Context Protocol) server deployed on Railway, a reputable cloud hosting platform (railway.app). The MCP server acts as a knowledge engine that provides FAQ answers about proxy service providers (Bright Data, Oxylabs, Smartproxy, ScrapeOps) based on vendor and topic queries.
 
 **Purpose:**
 - The bot extracts intent (vendor + topic) from Reddit posts
@@ -20,15 +20,24 @@ This domain is an ngrok tunnel that forwards requests to a local MCP (Model Cont
 **Data Flow:**
 1. Reddit post is created → Trigger fires
 2. Bot extracts vendor and topic from post text
-3. HTTP request to ngrok domain → MCP server
+3. HTTP request to Railway domain → MCP server
 4. MCP server searches JSONL database and returns FAQ record
 5. Bot formats reply and posts to Reddit
 
 **Security:**
-- The ngrok tunnel is temporary and used only for development/testing
+- The server is hosted on Railway (reputable cloud platform, railway.app)
 - All requests are POST requests with JSON payloads
 - The MCP server only returns read-only FAQ data
 - No user data is transmitted to the external domain
+- Server uses HTTPS encryption for all communications
+- Railway provides stable, production-grade hosting with 99.9% uptime SLA
+
+**Why Railway:**
+- Production-grade hosting platform with reliable uptime
+- Stable, permanent domain (not temporary)
+- HTTPS enabled by default
+- Suitable for production Reddit bot operations
+- Railway is a trusted platform used by thousands of developers
 
 ## Next up
 
